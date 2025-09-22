@@ -34,9 +34,9 @@ export const routes: Routes = [
             { path: "wishlist", loadComponent: () => import('./features/wish-list/wish-list.component').then((c) => c.WishListComponent), title: "Categories Page" },
             { path: "allorders", loadComponent: () => import('./features/all-orders/all-orders.component').then((c) => c.AllOrdersComponent), title: "All Orders Page" },
             { path: "brands", loadComponent: () => import('./features/brands/brands.component').then((c) => c.BrandsComponent), title: "Brands Page" },
-            { path: "details/:slug/:id", loadComponent: () => import('./features/details/details.component').then((c) => c.DetailsComponent), title: "Details Page" },
-            { path: "details/:id", loadComponent: () => import('./features/details/details.component').then((c) => c.DetailsComponent), title: "Details Page" },
-            { path: "checkout/:id", loadComponent: () => import('./features/checkout/checkout.component').then((c) => c.CheckoutComponent), title: "Checkout Page" },
+            { path: "details/:slug/:id", loadComponent: () => import('./features/details/details.component').then((c) => c.DetailsComponent),data: { renderMode: 'csr' }, title: "Details Page" },
+            { path: "details/:id", loadComponent: () => import('./features/details/details.component').then((c) => c.DetailsComponent),data: { renderMode: 'csr' }, title: "Details Page" },
+            { path: "checkout/:id", loadComponent: () => import('./features/checkout/checkout.component').then((c) => c.CheckoutComponent),data: { renderMode: 'csr' }, title: "Checkout Page" },
         ]
     },
     {
